@@ -12,18 +12,20 @@ export default function App() {
   const [coins, setCoins] = useState(0);
   const [players, setPlayers] = useState([]);
   const [selectedPlayers, setSelectedPlayers] = useState([]);
+
   const toggleButton = (button) => {
     setIsActive(button);
+   
   };
 
   const addCoins = () => {
     setCoins(coins + 8000000);
-    toast.success(`8000000 Coin has been added with main balance`);
-    
+    toast.success(`8000000 Coins have been added to your main balance.`);
   };
 
   const selectPlayer = (player) => {
     const playerPrice = player.biddingPrice;
+
     // Check if the user has enough coins
     if (coins < playerPrice) {
       toast.error("You do not have enough coins to select this player.");
@@ -43,38 +45,39 @@ export default function App() {
       return;
     }
 
-    // reduce coins after confirming the player can be selected
+    // Reduce coins and add the player to selected players
     setCoins(coins - playerPrice);
-
-    // Add the player to the selected players list
-    setSelectedPlayers([...selectedPlayers, player]);
-    toast.success(` ${player.name} is selected in your squad`);
-
+    setSelectedPlayers((prevSelected) => [...prevSelected, player]);
+    toast.success(`${player.name} has been selected for your squad.`);
   };
 
   useEffect(() => {
-    fetch('../../../../public/Players.json')
+    fetch('/Players.json') // Ensure correct path to Players.json
       .then(res => res.json())
       .then(data => {
         setPlayers(data);
+      })
+      .catch(error => {
+        console.error("Error fetching players:", error);
+        toast.error("Failed to fetch players.");
       });
   }, []);
 
   return (
     <>
-      <Header coins={coins}></Header>
-      <Banner addCoins={addCoins}></Banner>
-      <Main isActive={isActive} 
-        players={players} 
-        toggleButton={toggleButton} 
-        selectPlayer={selectPlayer} 
-        selectedPlayers={selectedPlayers} 
+      <Header coins={coins} />
+      <Banner addCoins={addCoins} />
+      <Main
+        isActive={isActive}
+        players={players}
+        toggleButton={toggleButton}
+        selectPlayer={selectPlayer}
+        selectedPlayers={selectedPlayers}
         setSelectedPlayers={setSelectedPlayers}
-      >
-        </Main>
-        <NewsLetter></NewsLetter>
-      <Footer></Footer>
-      <ToastContainer position="top-center"/>
+      />
+      <NewsLetter />
+      <Footer />
+      <ToastContainer position="top-center" />
     </>
   );
 }

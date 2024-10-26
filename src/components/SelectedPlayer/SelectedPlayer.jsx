@@ -22,8 +22,6 @@ export default function SelectedPlayer({
 
   return (
     <div className="grid grid-cols-1 gap-4 w-9/12 mx-auto mb-28">
-      <ToastContainer position="top-center" />
-
       {selectedPlayers.length > 0 ? (
         selectedPlayers.map((player) => (
           <div key={player.playerId} className="card rounded-2xl bg-base-100 shadow-xl p-3">
