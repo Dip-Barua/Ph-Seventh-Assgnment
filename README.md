@@ -3,8 +3,8 @@
 Welcome to **BPL-Dream 11 - Assignment 7**, your ultimate destination for managing and selecting your favorite players! Dive into the world of sports and build your dream team effortlessly.
 
 
-Repository Url : 
-Live link: 
+Repository Url : https://github.com/programming-hero-web-course1/b10a7-dream-11-Dip-Barua
+Live link: https://bpldream-ph-7th-assignment.netlify.app/
 
 ---
 
