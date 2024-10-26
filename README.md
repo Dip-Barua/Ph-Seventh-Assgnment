@@ -7,9 +7,7 @@ Repository Url : https://github.com/programming-hero-web-course1/b10a7-dream-11-
 
 Live link: https://bpldream-ph-7th-assignment.netlify.app/
 
-Live link: https://bpl-dream-ph7thassignment.surge.sh
-
----
+Live link: https://bpl-dream-ph7thassignment.surge.sh/
 
 ## 🌟 Description
 In this project, you can browse through a wide scope of players, select your favorites, and manage your selections seamlessly. It's designed for sports enthusiasts looking to enhance their team-building experience.
