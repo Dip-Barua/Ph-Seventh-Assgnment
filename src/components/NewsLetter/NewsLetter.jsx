@@ -12,7 +12,7 @@ const NewsLetter = () => {
                 <input type="text" placeholder="Enter your email" className="border-2 border-gray-400 p-3 rounded-2xl" /> 
                 </div>
                 <div>
-                    <button  className="btn py-3 rounded-xl text-Black text-md font-bold bg-[#E7FE29]" 
+                    <button  className="btn py-3 rounded-xl text-Black text-md font-bold bg-grad" 
                     >Subscribe</button>
                 </div>
             </div>

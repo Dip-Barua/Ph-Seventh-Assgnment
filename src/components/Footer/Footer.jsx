@@ -1,5 +1,5 @@
 import logo from '../../assets/logo.png';
-
+import './../NewsLetter/Newsletter.css'
 const Footer = () => {
   return (
     <>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <input type="text" placeholder="Enter your email" className="border-2 border-gray-400 p-2 rounded-xl" /> 
                 </div>
                 <div>
-                    <button  className="btn py-2 rounded-xl text-Black text-md font-bold bg-[#E7FE29]" 
+                    <button  className="btn py-2 rounded-xl text-Black text-md font-bold bg-grad" 
                     >Subscribe</button>
                 </div>
             </div>
